@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>MY QS | Quantity Surveying & Construction Cost Consultancy in Kenya</title>
-<meta name="description" content="MY QS provides professional quantity surveying, cost management and construction consultancy services in Kenya. Control costs, manage risk and maximise value.">
+<meta name="description" content="MY QS provides professional quantity surveying, cost management and construction consultancy services in Kenya.">
 <meta property="og:title" content="MY QS | Quantity Surveying in Kenya">
 <meta property="og:description" content="Professional quantity surveying, cost management and commercial consultancy in Kenya.">
 <meta property="og:type" content="website">
@@ -12,9 +12,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!--
+╔══════════════════════════════════════════════════════════════════════╗
+║   ★★★  HOW TO REPLACE ANY IMAGE ON THIS WEBSITE  ★★★                ║
+║                                                                      ║
+║   STEP 1:  Press  Ctrl + F  and search for:   IMAGE_MAP              ║
+║   STEP 2:  You will find ONE object listing every image on the site. ║
+║   STEP 3:  Change the path next to any key. Save the file. Done.     ║
+║                                                                      ║
+║   WINDOWS PATH FORMAT RULES:                                         ║
+║   Original:  C:\Users\PRIMEHOUSE 1\Downloads\photo.png               ║
+║   Correct :  file:///C:/Users/PRIMEHOUSE%201/Downloads/photo.png     ║
+║                                                                      ║
+║   Rules:  \ → /       space → %20       add file:/// at the start    ║
+║                                                                      ║
+║   EASIEST OPTION:                                                    ║
+║   Copy the image into the SAME folder as index.html and just write:  ║
+║         photo.png                                                    ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+-->
+
 <style>
 /* ============================================================
-   MY QS — SINGLE FILE STYLESHEET (mobile-first)
+   MY QS — STYLESHEET (mobile-first)
    ============================================================ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -32,7 +54,6 @@ input,select,textarea{font:inherit;color:inherit}
   --container:1240px;--gutter:20px;--radius:2px;
   --font-head:'Manrope','Poppins',system-ui,sans-serif;
   --shadow-md:0 10px 30px -12px rgba(7,24,47,.18);
-  --shadow-lg:0 30px 60px -30px rgba(7,24,47,.35);
   --ease:cubic-bezier(.22,.61,.36,1);
   --header-h:76px;
 }
@@ -64,8 +85,6 @@ p{color:var(--muted)}
 .btn-block{width:100%}
 .link-arrow{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-head);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-900);border-bottom:1.5px solid var(--gold);padding-bottom:4px;transition:gap .3s var(--ease),color .3s var(--ease)}
 .link-arrow:hover{gap:.9rem;color:var(--gold)}
-
-/* HEADER */
 .site-header{position:fixed;inset:0 0 auto 0;z-index:1000;background:var(--navy-900);transition:box-shadow .3s var(--ease)}
 .site-header.is-scrolled{box-shadow:0 8px 30px -12px rgba(7,24,47,.5);background:rgba(7,24,47,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .topbar{background:rgba(0,0,0,.35);border-bottom:1px solid rgba(255,255,255,.07);font-size:.74rem;color:rgba(255,255,255,.75)}
@@ -116,11 +135,8 @@ p{color:var(--muted)}
   body.nav-open{overflow:hidden}
 }
 @media (min-width:900px){.nav-mobile-cta{display:none}.nav-toggle{display:none}}
-
 .page{display:none}
 .page.is-active{display:block}
-
-/* HERO */
 .hero{position:relative;display:flex;align-items:center;min-height:100vh;min-height:100dvh;padding:calc(var(--header-h) + 40px) 0 90px;overflow:hidden;background:var(--navy-900);color:#fff}
 .hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;animation:heroZoom 18s var(--ease) forwards}
 @keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
@@ -154,7 +170,6 @@ p{color:var(--muted)}
 @media (min-width:1024px){.scroll-cue{display:flex}}
 .scroll-cue-line{width:1.5px;height:40px;background:linear-gradient(var(--gold),transparent);animation:scrollPulse 2s ease-in-out infinite}
 @keyframes scrollPulse{0%,100%{transform:scaleY(.5);opacity:.4}50%{transform:scaleY(1);opacity:1}}
-
 .metrics{background:var(--navy-800);color:#fff;padding:clamp(40px,6vw,72px) 0;border-bottom:1px solid rgba(245,169,0,.18)}
 .metrics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08)}
 @media (min-width:768px){.metrics-grid{grid-template-columns:repeat(4,1fr)}}
@@ -165,7 +180,6 @@ p{color:var(--muted)}
 .metric-label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.72);font-weight:500}
 @media (min-width:768px){.metric-label{font-size:.78rem}}
 .metrics-note{text-align:center;margin-top:1.2rem;font-size:.74rem;color:rgba(255,255,255,.4)}
-
 .section-head{margin-bottom:clamp(1.8rem,5vw,4rem)}
 .section-head--split{display:grid;gap:1.5rem;align-items:end}
 @media (min-width:900px){.section-head--split{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:3rem}}
@@ -176,7 +190,6 @@ p{color:var(--muted)}
 .section-title{color:var(--navy-900)}
 .section-title--light{color:#fff}
 .gold-rule{display:block;width:56px;height:3px;background:var(--gold);margin:1.2rem 0 1.4rem}
-
 .split-grid{display:grid;gap:2rem;align-items:center}
 @media (min-width:900px){.split-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4rem}}
 .split-media{position:relative;overflow:hidden;border-radius:var(--radius)}
@@ -191,7 +204,6 @@ p{color:var(--muted)}
 .tick-list{margin:1.4rem 0 1.8rem;display:grid;gap:.75rem}
 .tick-list li{display:flex;align-items:flex-start;gap:.75rem;color:var(--ink);font-size:.94rem}
 .tick-list i{flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--navy-900);font-size:.58rem;display:grid;place-items:center;margin-top:4px}
-
 .services-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--grey-100);border:1px solid var(--grey-100)}
 @media (min-width:600px){.services-grid{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){.services-grid{grid-template-columns:repeat(3,1fr)}}
@@ -210,7 +222,6 @@ p{color:var(--muted)}
 .service-card-link i{transition:transform .35s var(--ease)}
 .service-card:hover .service-card-link{color:var(--gold)}
 .service-card:hover .service-card-link i{transform:translateX(6px)}
-
 .why-section{position:relative;overflow:hidden}
 .measure-line{position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5}
 .why-grid{display:grid;grid-template-columns:1fr;gap:2px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08)}
@@ -224,7 +235,6 @@ p{color:var(--muted)}
 .why-num{display:block;font-family:var(--font-head);font-weight:800;font-size:.7rem;letter-spacing:.16em;color:var(--gold);margin-bottom:.5rem}
 .why-item h3{color:#fff;margin-bottom:.5rem}
 .why-item p{color:rgba(255,255,255,.68);font-size:.88rem;line-height:1.7}
-
 .projects-grid{display:grid;grid-template-columns:1fr;gap:1.4rem}
 @media (min-width:600px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){.projects-grid{grid-template-columns:repeat(3,1fr)}}
@@ -248,7 +258,6 @@ p{color:var(--muted)}
 .filter-btn{padding:.6rem 1rem;font-family:var(--font-head);font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border:1.5px solid var(--grey-300);color:var(--navy-900);background:#fff;transition:all .3s var(--ease);border-radius:var(--radius);cursor:pointer}
 .filter-btn:hover{border-color:var(--gold);color:var(--gold)}
 .filter-btn.is-active{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
-
 .process-track{display:grid;grid-template-columns:1fr;gap:0;position:relative;padding-left:0}
 @media (min-width:900px){.process-track{grid-template-columns:repeat(3,1fr);gap:2.4rem 1rem}}
 @media (min-width:1200px){.process-track{grid-template-columns:repeat(6,1fr);gap:0}.process-track::before{content:'';position:absolute;top:34px;left:6%;right:6%;height:2px;background:var(--gold);opacity:.3}}
@@ -261,7 +270,6 @@ p{color:var(--muted)}
 .process-step h3{font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--navy-900);line-height:1.3}
 .process-step p{font-size:.84rem;margin-top:.3rem;line-height:1.6}
 @media (min-width:900px){.process-step{display:block;text-align:center;padding:0 .6rem}.process-step::before{display:none}.process-dot{width:68px;height:68px;margin:0 auto 1.1rem;font-size:1rem}.process-step h3{font-size:.82rem}.process-step p{font-size:.82rem;padding:0 .3rem}}
-
 .industries-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;background:var(--navy-900)}
 @media (min-width:600px){.industries-grid{grid-template-columns:repeat(3,1fr)}}
 @media (min-width:900px){.industries-grid{grid-template-columns:repeat(6,1fr)}}
@@ -275,7 +283,6 @@ p{color:var(--muted)}
 .industry-icon{font-size:1.2rem;color:var(--gold);margin-bottom:.5rem;display:block}
 .industry-body h3{color:#fff;font-size:.92rem;letter-spacing:.02em;margin-bottom:.3rem}
 .industry-body p{font-size:.72rem;color:rgba(255,255,255,.72);line-height:1.5}
-
 .testimonials{position:relative}
 .testimonial-stage{max-width:820px;margin:1.6rem 0 2rem;position:relative}
 .testimonial-slide{display:none}
@@ -292,7 +299,6 @@ p{color:var(--muted)}
 .t-nav:hover{background:var(--gold);border-color:var(--gold);color:var(--navy-900)}
 .t-counter{font-family:var(--font-head);font-weight:700;font-size:.8rem;letter-spacing:.14em;color:rgba(255,255,255,.7)}
 .t-counter #tCurrent{color:var(--gold)}
-
 .insights-grid{display:grid;grid-template-columns:1fr;gap:1.4rem}
 @media (min-width:600px){.insights-grid{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){.insights-grid{grid-template-columns:repeat(3,1fr)}}
@@ -310,7 +316,6 @@ p{color:var(--muted)}
 .insight-more i{transition:transform .35s var(--ease)}
 .insight-card:hover .insight-more{color:var(--gold)}
 .insight-card:hover .insight-more i{transform:translateX(5px)}
-
 .cta-band{position:relative;background:var(--navy-900);color:#fff;padding:clamp(48px,7vw,90px) 0;overflow:hidden;border-top:1px solid rgba(245,169,0,.2)}
 .cta-blueprint{position:absolute;inset:0;opacity:.1;pointer-events:none;background-image:linear-gradient(rgba(245,169,0,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(245,169,0,.5) 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(circle at 30% 50%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(circle at 30% 50%,#000 20%,transparent 75%)}
 .cta-inner{position:relative;display:flex;flex-direction:column;gap:1.6rem;align-items:flex-start}
@@ -321,7 +326,6 @@ p{color:var(--muted)}
 @media (min-width:768px){.cta-actions{width:auto}}
 .cta-actions .btn{flex:1 1 200px}
 @media (min-width:768px){.cta-actions .btn{flex:0 0 auto}}
-
 .site-footer{background:var(--navy-900);color:rgba(255,255,255,.75);font-size:.88rem}
 .footer-top{display:grid;grid-template-columns:1fr;gap:2rem;padding:clamp(40px,6vw,80px) 0 2.5rem;border-bottom:1px solid rgba(255,255,255,.08)}
 @media (min-width:600px){.footer-top{grid-template-columns:1fr 1fr;gap:2.5rem}}
@@ -352,12 +356,10 @@ p{color:var(--muted)}
 .footer-bottom ul{display:flex;gap:1.4rem}
 .footer-bottom a{color:rgba(255,255,255,.6);transition:color .25s var(--ease)}
 .footer-bottom a:hover{color:var(--gold)}
-
 .back-to-top{position:fixed;right:14px;bottom:14px;z-index:900;width:42px;height:42px;background:var(--gold);color:var(--navy-900);display:grid;place-items:center;font-size:.88rem;opacity:0;visibility:hidden;transform:translateY(14px);transition:all .35s var(--ease);border-radius:2px;cursor:pointer}
 @media (min-width:768px){.back-to-top{right:22px;bottom:22px;width:46px;height:46px}}
 .back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
 .back-to-top:hover{background:var(--navy-900);color:var(--gold)}
-
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.is-in{opacity:1;transform:translateY(0)}
 .anim-up{opacity:0;transform:translateY(24px);animation:fadeUp .9s var(--ease) forwards}
@@ -373,7 +375,6 @@ p{color:var(--muted)}
   .reveal{opacity:1;transform:none}
   .anim-up{opacity:1;transform:none;animation:none}
 }
-
 .form-grid{display:grid;grid-template-columns:1fr;gap:1.1rem}
 @media (min-width:600px){.form-grid{grid-template-columns:repeat(2,1fr);gap:1.4rem}}
 .form-grid .full{grid-column:1/-1}
@@ -388,7 +389,6 @@ p{color:var(--muted)}
 .form-status.is-success{display:block;background:rgba(245,169,0,.12);color:#7a5500;border:1px solid rgba(245,169,0,.35)}
 .form-status.is-error{display:block;background:rgba(192,57,43,.08);color:#8a1f13;border:1px solid rgba(192,57,43,.3)}
 .file-note{font-size:.78rem;color:var(--muted);margin-top:.3rem}
-
 .lightbox{position:fixed;inset:0;z-index:9998;background:rgba(7,24,47,.96);display:none;align-items:center;justify-content:center;padding:2rem;opacity:0;transition:opacity .3s var(--ease)}
 .lightbox.is-open{display:flex;opacity:1}
 .lightbox-figure{max-width:min(1100px,92vw);max-height:88vh;margin:0;text-align:center}
@@ -400,7 +400,6 @@ p{color:var(--muted)}
 .lightbox-prev{left:8px;top:50%;transform:translateY(-50%)}
 .lightbox-next{right:8px;top:50%;transform:translateY(-50%)}
 @media (min-width:768px){.lightbox-close{top:22px;right:22px}.lightbox-prev{left:22px}.lightbox-next{right:22px}}
-
 .page-hero{background:var(--navy-900);color:#fff;padding:calc(var(--header-h) + 40px) 0 50px;position:relative;overflow:hidden}
 .page-hero::after{content:'';position:absolute;inset:0;opacity:.12;pointer-events:none;background-image:linear-gradient(rgba(245,169,0,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(245,169,0,.5) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(circle at 80% 60%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(circle at 80% 60%,#000 20%,transparent 70%)}
 .page-hero .container{position:relative;z-index:2}
@@ -433,8 +432,6 @@ p{color:var(--muted)}
 .contact-info span{font-size:.88rem;color:var(--muted)}
 .contact-info a{color:var(--muted);transition:color .25s var(--ease)}
 .contact-info a:hover{color:var(--gold)}
-
-/* ============ LIVE MAP ============ */
 .map-wrap{position:relative;border:1px solid var(--grey-100);border-radius:var(--radius);overflow:hidden;background:var(--grey-50)}
 .map-wrap::before{content:'';display:block;padding-bottom:72%}
 .map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;filter:grayscale(.15) contrast(1.05)}
@@ -444,7 +441,6 @@ p{color:var(--muted)}
 .map-caption a{color:var(--gold);font-weight:600;font-family:var(--font-head);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.4rem;transition:gap .25s var(--ease)}
 .map-caption a:hover{gap:.7rem}
 @media (min-width:600px){.map-wrap::before{padding-bottom:56%}}
-
 .article-body{max-width:760px;margin:0 auto}
 .article-body p{margin-bottom:1.2rem;font-size:1.02rem;line-height:1.8}
 .article-body h2{margin:2.2rem 0 1rem;font-size:1.5rem}
@@ -462,6 +458,14 @@ p{color:var(--muted)}
 </head>
 <body>
 
+<!-- ═══════════════════════════════════════════════════════════════════
+     NOTE ABOUT IMAGES:
+     Every <img> tag on this page uses  data-img="KEY"  instead of src="".
+     JavaScript (at the bottom of this file) reads the IMAGE_MAP object
+     and fills in the actual paths automatically. You only need to edit
+     IMAGE_MAP — never the HTML.
+     ═══════════════════════════════════════════════════════════════════ -->
+
 <header class="site-header" id="siteHeader">
   <div class="topbar">
     <div class="container topbar-inner">
@@ -474,7 +478,8 @@ p{color:var(--muted)}
   </div>
   <div class="header-container container">
     <a class="brand" href="#home" aria-label="MY QS home">
-      <img class="brand-logo" src="images/4993f972-b299-4f15-a0f8-571536574899.png" alt="MY QS — Quantity Surveying and Construction Cost Consultancy"
+      <!-- IMAGE KEY: IMG_HEADER_LOGO  →  edit in IMAGE_MAP -->
+      <img class="brand-logo" data-img="images/4993f972-b299-4f15-a0f8-571536574899.png" alt="MY QS — Quantity Surveying and Construction Cost Consultancy"
            onerror="this.style.display='none';document.getElementById('brandFallback').style.display='flex';">
       <span class="brand-fallback" id="brandFallback" aria-hidden="true"><span>MY</span><span>QS</span></span>
     </a>
@@ -503,11 +508,11 @@ p{color:var(--muted)}
 
 <main id="main">
 
-<!-- HOME -->
+<!-- ══════════════════ PAGE: HOME ══════════════════ -->
 <section class="page is-active" id="page-home" data-page="home">
   <div class="hero">
-    <img class="hero-media" src="images/Quantity-Surveyor-Kenya.jfif" alt="Modern construction development in Nairobi, Kenya" fetchpriority="high"
-         onerror="this.style.background='linear-gradient(135deg,#07182F 0%,#0D294A 100%)';this.removeAttribute('src');">
+    <!-- IMAGE KEY: IMG_HERO_MAIN  →  edit in IMAGE_MAP -->
+    <img class="hero-media" data-img="IMG_HERO_MAIN" alt="Modern construction development in Nairobi, Kenya" fetchpriority="high">
     <div class="hero-overlay"></div>
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="container hero-inner">
@@ -545,15 +550,15 @@ p{color:var(--muted)}
   <div class="metrics" id="metrics">
     <div class="container">
       <div class="metrics-grid" id="metricsGrid"></div>
-      <p class="metrics-note">Placeholder figures — replace with verified MY QS company data in the DATA section.</p>
+      <p class="metrics-note">Placeholder figures — replace with verified MY QS company data.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="container split-grid">
       <div class="split-media reveal">
-        <img src="images/Quantity Surveyor Kenya.jfif" alt="Quantity surveyor reviewing construction drawings on site" loading="lazy"
-             onerror="this.style.background='linear-gradient(135deg,#0D294A,#58789D)';this.removeAttribute('src');">
+        <!-- IMAGE KEY: IMG_ABOUT_MAIN  →  edit in IMAGE_MAP -->
+        <img data-img="images/Quantity Surveyor Kenya.jfif" alt="Quantity surveyor reviewing construction drawings on site">
         <span class="blueprint-lines" aria-hidden="true"></span>
         <div class="split-media-badge"><strong>QS</strong><span>Measurement<br>Precision</span></div>
       </div>
@@ -649,7 +654,7 @@ p{color:var(--muted)}
         <span class="t-counter"><span id="tCurrent">01</span> / <span id="tTotal">04</span></span>
         <button class="t-nav" id="tNext" aria-label="Next testimonial" type="button"><i class="fa-solid fa-arrow-right"></i></button>
       </div>
-      <p class="metrics-note">Placeholder testimonials — replace with approved client feedback in the DATA section.</p>
+      <p class="metrics-note">Placeholder testimonials — replace with approved client feedback.</p>
     </div>
   </div>
 
@@ -683,7 +688,7 @@ p{color:var(--muted)}
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ══════════════════ PAGE: ABOUT ══════════════════ -->
 <section class="page" id="page-about" data-page="about">
   <div class="page-hero">
     <div class="container">
@@ -696,8 +701,8 @@ p{color:var(--muted)}
   <div class="section">
     <div class="container split-grid">
       <div class="split-media reveal">
-        <img src="assets/images/about/about-team.jpg" alt="MY QS quantity surveying team on a construction project in Kenya" loading="lazy"
-             onerror="this.style.background='linear-gradient(135deg,#0D294A,#58789D)';this.removeAttribute('src');">
+        <!-- IMAGE KEY: IMG_ABOUT_TEAM  →  edit in IMAGE_MAP -->
+        <img data-img="IMG_ABOUT_TEAM" alt="MY QS quantity surveying team on a construction project in Kenya">
         <span class="blueprint-lines" aria-hidden="true"></span>
       </div>
       <div class="split-content">
@@ -715,24 +720,9 @@ p{color:var(--muted)}
   <div class="section section--grey">
     <div class="container">
       <div class="services-grid">
-        <article class="service-card reveal">
-          <span class="service-card-num">MISSION</span>
-          <div class="service-card-icon"><i class="fa-solid fa-bullseye"></i></div>
-          <h3>Our Mission</h3>
-          <p>To provide accurate, independent and commercially intelligent quantity surveying services that protect our clients' interests and maximise project value across Kenya.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-card-num">VISION</span>
-          <div class="service-card-icon"><i class="fa-solid fa-eye"></i></div>
-          <h3>Our Vision</h3>
-          <p>To be recognised as a leading quantity surveying and construction cost consultancy in Kenya, trusted by clients for precision, integrity and commercial insight.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-card-num">APPROACH</span>
-          <div class="service-card-icon"><i class="fa-solid fa-diagram-project"></i></div>
-          <h3>Our Approach</h3>
-          <p>Disciplined measurement, transparent reporting and rigorous commercial control applied consistently from feasibility through to final account.</p>
-        </article>
+        <article class="service-card reveal"><span class="service-card-num">MISSION</span><div class="service-card-icon"><i class="fa-solid fa-bullseye"></i></div><h3>Our Mission</h3><p>To provide accurate, independent and commercially intelligent quantity surveying services that protect our clients' interests and maximise project value across Kenya.</p></article>
+        <article class="service-card reveal"><span class="service-card-num">VISION</span><div class="service-card-icon"><i class="fa-solid fa-eye"></i></div><h3>Our Vision</h3><p>To be recognised as a leading quantity surveying and construction cost consultancy in Kenya, trusted by clients for precision, integrity and commercial insight.</p></article>
+        <article class="service-card reveal"><span class="service-card-num">APPROACH</span><div class="service-card-icon"><i class="fa-solid fa-diagram-project"></i></div><h3>Our Approach</h3><p>Disciplined measurement, transparent reporting and rigorous commercial control applied consistently from feasibility through to final account.</p></article>
       </div>
     </div>
   </div>
@@ -757,7 +747,7 @@ p{color:var(--muted)}
       <div class="section-head">
         <span class="section-label reveal">Our Team</span>
         <h2 class="section-title reveal">The people behind MY QS</h2>
-        <p style="margin-top:.8rem;max-width:60ch">Placeholder team profiles — replace with real team member names, roles and photos in the DATA section.</p>
+        <p style="margin-top:.8rem;max-width:60ch">Placeholder team profiles — replace with real team member names, roles and photos.</p>
       </div>
       <div class="services-grid" id="aboutTeamGrid"></div>
     </div>
@@ -766,19 +756,13 @@ p{color:var(--muted)}
   <div class="cta-band">
     <div class="cta-blueprint" aria-hidden="true"></div>
     <div class="container cta-inner">
-      <div>
-        <h2 class="cta-title reveal">Ready to work with MY QS?</h2>
-        <p class="cta-copy reveal">Let's discuss your project and how we can help control its cost.</p>
-      </div>
-      <div class="cta-actions reveal">
-        <a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#contact" class="btn btn-outline-light">Contact Us</a>
-      </div>
+      <div><h2 class="cta-title reveal">Ready to work with MY QS?</h2><p class="cta-copy reveal">Let's discuss your project and how we can help control its cost.</p></div>
+      <div class="cta-actions reveal"><a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a><a href="#contact" class="btn btn-outline-light">Contact Us</a></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- ══════════════════ PAGE: SERVICES ══════════════════ -->
 <section class="page" id="page-services" data-page="services">
   <div class="page-hero">
     <div class="container">
@@ -787,24 +771,19 @@ p{color:var(--muted)}
       <p>Professional quantity surveying, cost management and commercial consultancy across the construction project lifecycle.</p>
     </div>
   </div>
-
   <div class="section">
     <div class="container">
       <div class="section-head">
         <span class="section-label reveal">Full Service Offering</span>
         <h2 class="section-title reveal">Eight core services. One commercial objective.</h2>
-        <p style="margin-top:.8rem;max-width:64ch">Click any service to see what's included, what you receive, and how we deliver it. Every service is available as a standalone appointment or as part of a full project appointment.</p>
+        <p style="margin-top:.8rem;max-width:64ch">Click any service to see what's included, what you receive, and how we deliver it.</p>
       </div>
       <div class="services-grid" id="servicesPageGrid"></div>
     </div>
   </div>
-
   <div class="section section--grey">
     <div class="container">
-      <div class="section-head">
-        <span class="section-label reveal">Why Us</span>
-        <h2 class="section-title reveal">Why clients choose MY QS</h2>
-      </div>
+      <div class="section-head"><span class="section-label reveal">Why Us</span><h2 class="section-title reveal">Why clients choose MY QS</h2></div>
       <div class="why-grid" style="background:var(--grey-100);border-color:var(--grey-100)">
         <article class="why-item reveal" style="background:#fff"><span class="why-icon" style="color:var(--gold);border-color:rgba(245,169,0,.35)"><i class="fa-solid fa-crosshairs"></i></span><span class="why-num">01</span><h3 style="color:var(--navy-900)">Accuracy</h3><p style="color:var(--muted)">Precise measurement and reliable cost forecasting.</p></article>
         <article class="why-item reveal" style="background:#fff"><span class="why-icon" style="color:var(--gold);border-color:rgba(245,169,0,.35)"><i class="fa-solid fa-helmet-safety"></i></span><span class="why-num">02</span><h3 style="color:var(--navy-900)">Experience</h3><p style="color:var(--muted)">Professional expertise across varied construction projects.</p></article>
@@ -813,107 +792,82 @@ p{color:var(--muted)}
       </div>
     </div>
   </div>
-
   <div class="cta-band">
     <div class="cta-blueprint" aria-hidden="true"></div>
     <div class="container cta-inner">
-      <div>
-        <h2 class="cta-title reveal">Need a cost consultancy partner?</h2>
-        <p class="cta-copy reveal">Tell us about your project and we'll advise on the right services.</p>
-      </div>
-      <div class="cta-actions reveal">
-        <a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
+      <div><h2 class="cta-title reveal">Need a cost consultancy partner?</h2><p class="cta-copy reveal">Tell us about your project and we'll advise on the right services.</p></div>
+      <div class="cta-actions reveal"><a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE DETAIL -->
+<!-- ══════════════════ PAGE: SERVICE DETAILS ══════════════════ -->
 <section class="page" id="page-service-details" data-page="service-details">
   <div id="serviceDetailsRoot"></div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ══════════════════ PAGE: PROJECTS ══════════════════ -->
 <section class="page" id="page-projects" data-page="projects">
   <div class="page-hero">
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#home">Home</a> / <span>Projects</span></nav>
       <h1>Projects</h1>
-      <p>Selected quantity surveying, cost management and commercial consultancy engagements across Kenya. Filter by sector to see relevant work.</p>
+      <p>Selected quantity surveying, cost management and commercial consultancy engagements across Kenya.</p>
     </div>
   </div>
-
   <div class="section">
     <div class="container">
       <div class="filter-bar" id="filterBar" role="tablist" aria-label="Filter projects"></div>
       <div class="projects-grid" id="projectsGrid"></div>
     </div>
   </div>
-
   <div class="cta-band">
     <div class="cta-blueprint" aria-hidden="true"></div>
     <div class="container cta-inner">
-      <div>
-        <h2 class="cta-title reveal">Your project could be next.</h2>
-        <p class="cta-copy reveal">Let's talk about how MY QS can support your development.</p>
-      </div>
-      <div class="cta-actions reveal">
-        <a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
+      <div><h2 class="cta-title reveal">Your project could be next.</h2><p class="cta-copy reveal">Let's talk about how MY QS can support your development.</p></div>
+      <div class="cta-actions reveal"><a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a></div>
     </div>
   </div>
 </section>
 
-<!-- PROJECT DETAILS -->
+<!-- ══════════════════ PAGE: PROJECT DETAILS ══════════════════ -->
 <section class="page" id="page-project-details" data-page="project-details">
   <div id="projectDetailsRoot"></div>
 </section>
 
-<!-- INSIGHTS -->
+<!-- ══════════════════ PAGE: INSIGHTS ══════════════════ -->
 <section class="page" id="page-insights" data-page="insights">
   <div class="page-hero">
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#home">Home</a> / <span>Insights</span></nav>
       <h1>Insights</h1>
-      <p>Practical guidance on quantity surveying, cost management and construction procurement in Kenya — written for developers, contractors and project teams.</p>
+      <p>Practical guidance on quantity surveying, cost management and construction procurement in Kenya.</p>
     </div>
   </div>
-
-  <div class="section">
-    <div class="container">
-      <div class="insights-grid" id="insightsGrid"></div>
-    </div>
-  </div>
-
+  <div class="section"><div class="container"><div class="insights-grid" id="insightsGrid"></div></div></div>
   <div class="cta-band">
     <div class="cta-blueprint" aria-hidden="true"></div>
     <div class="container cta-inner">
-      <div>
-        <h2 class="cta-title reveal">Have a cost question?</h2>
-        <p class="cta-copy reveal">Speak to a quantity surveyor about your project.</p>
-      </div>
-      <div class="cta-actions reveal">
-        <a href="#contact" class="btn btn-gold">Contact MY QS <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
+      <div><h2 class="cta-title reveal">Have a cost question?</h2><p class="cta-copy reveal">Speak to a quantity surveyor about your project.</p></div>
+      <div class="cta-actions reveal"><a href="#contact" class="btn btn-gold">Contact MY QS <i class="fa-solid fa-arrow-right"></i></a></div>
     </div>
   </div>
 </section>
 
-<!-- ARTICLE DETAIL -->
+<!-- ══════════════════ PAGE: ARTICLE DETAILS ══════════════════ -->
 <section class="page" id="page-article-details" data-page="article-details">
   <div id="articleDetailsRoot"></div>
 </section>
 
-<!-- CONTACT (with LIVE MAP) -->
+<!-- ══════════════════ PAGE: CONTACT ══════════════════ -->
 <section class="page" id="page-contact" data-page="contact">
   <div class="page-hero">
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#home">Home</a> / <span>Contact</span></nav>
       <h1>Contact Us</h1>
-      <p>Talk to MY QS about your construction project, cost planning or commercial requirements. We respond to all enquiries within one business day.</p>
+      <p>Talk to MY QS about your construction project, cost planning or commercial requirements.</p>
     </div>
   </div>
-
   <div class="section">
     <div class="container contact-split">
       <div>
@@ -926,29 +880,14 @@ p{color:var(--muted)}
           <li><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span><a href="mailto:info@myqs.co.ke">info@myqs.co.ke</a></span></div></li>
           <li><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><span>Mon – Fri, 8:00 – 17:00 EAT</span></div></li>
         </ul>
-
-        <!-- ============================================================
-             LIVE MAP — OpenStreetMap Embed (no API key required)
-             To change the location: update the bbox and marker values below.
-             Format: bbox=minLon,minLat,maxLon,maxLat & marker=lat,lon
-             Example for Mombasa: marker=-4.0435,39.6682
-             ============================================================ -->
         <div class="map-wrap reveal" aria-label="Map showing MY QS location in Nairobi, Kenya">
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=36.6969%2C-1.3800%2C36.9600%2C-1.2000&layer=mapnik&marker=-1.2921%2C36.8219"
-            title="MY QS location — Nairobi, Kenya"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=36.6969%2C-1.3800%2C36.9600%2C-1.2000&layer=mapnik&marker=-1.2921%2C36.8219" title="MY QS location — Nairobi, Kenya" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map-caption reveal">
           <div><strong>Nairobi, Kenya</strong> · Serving projects across Kenya</div>
-          <a href="https://www.openstreetmap.org/?mlat=-1.2921&mlon=36.8219#map=13/-1.2921/36.8219"
-             target="_blank" rel="noopener">
-            View larger map <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+          <a href="https://www.openstreetmap.org/?mlat=-1.2921&mlon=36.8219#map=13/-1.2921/36.8219" target="_blank" rel="noopener">View larger map <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
-
       <div class="reveal">
         <form id="contactForm" novalidate>
           <div class="form-grid">
@@ -956,20 +895,8 @@ p{color:var(--muted)}
             <div class="field"><label for="cEmail">Email *</label><input id="cEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
             <div class="field"><label for="cPhone">Phone</label><input id="cPhone" name="phone" type="tel" autocomplete="tel" placeholder="+254 XXX XXX XXX"></div>
             <div class="field"><label for="cCompany">Company</label><input id="cCompany" name="company" type="text" placeholder="Your company"></div>
-            <div class="field"><label for="cType">Project Type</label>
-              <select id="cType" name="projectType">
-                <option value="">Select…</option>
-                <option>Residential</option><option>Commercial</option><option>Hospitality</option>
-                <option>Industrial</option><option>Institutional</option><option>Infrastructure</option><option>Other</option>
-              </select>
-            </div>
-            <div class="field"><label for="cValue">Estimated Project Value</label>
-              <select id="cValue" name="projectValue">
-                <option value="">Select…</option>
-                <option>Under KES 5M</option><option>KES 5M – 20M</option><option>KES 20M – 100M</option>
-                <option>KES 100M – 500M</option><option>Over KES 500M</option>
-              </select>
-            </div>
+            <div class="field"><label for="cType">Project Type</label><select id="cType" name="projectType"><option value="">Select…</option><option>Residential</option><option>Commercial</option><option>Hospitality</option><option>Industrial</option><option>Institutional</option><option>Infrastructure</option><option>Other</option></select></div>
+            <div class="field"><label for="cValue">Estimated Project Value</label><select id="cValue" name="projectValue"><option value="">Select…</option><option>Under KES 5M</option><option>KES 5M – 20M</option><option>KES 20M – 100M</option><option>KES 100M – 500M</option><option>Over KES 500M</option></select></div>
             <div class="field full"><label for="cMessage">Message *</label><textarea id="cMessage" name="message" required placeholder="Tell us about your project…"></textarea></div>
           </div>
           <button class="btn btn-gold" id="sendEnquiryBtn" type="submit" style="margin-top:1.4rem">Send Enquiry <i class="fa-solid fa-arrow-right"></i></button>
@@ -980,16 +907,15 @@ p{color:var(--muted)}
   </div>
 </section>
 
-<!-- QUOTE -->
+<!-- ══════════════════ PAGE: QUOTE ══════════════════ -->
 <section class="page" id="page-quote" data-page="quote">
   <div class="page-hero">
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#home">Home</a> / <span>Request a Quote</span></nav>
       <h1>Request a Quote</h1>
-      <p>Share your project details and we'll prepare a tailored quotation for quantity surveying and cost consultancy services. All information is treated confidentially.</p>
+      <p>Share your project details and we'll prepare a tailored quotation for quantity surveying and cost consultancy services.</p>
     </div>
   </div>
-
   <div class="section">
     <div class="container" style="max-width:920px">
       <form id="quoteForm" novalidate>
@@ -999,39 +925,20 @@ p{color:var(--muted)}
           <div class="field"><label for="qPhone">Phone *</label><input id="qPhone" name="phone" type="tel" required autocomplete="tel" placeholder="+254 XXX XXX XXX"></div>
           <div class="field"><label for="qCompany">Company</label><input id="qCompany" name="company" type="text" placeholder="Your company"></div>
           <div class="field"><label for="qLocation">Project Location *</label><input id="qLocation" name="location" type="text" required placeholder="e.g. Nairobi, Kenya"></div>
-          <div class="field"><label for="qType">Project Type *</label>
-            <select id="qType" name="projectType" required>
-              <option value="">Select…</option>
-              <option>Residential</option><option>Commercial</option><option>Hospitality</option>
-              <option>Industrial</option><option>Institutional</option><option>Infrastructure</option><option>Other</option>
-            </select>
-          </div>
-          <div class="field"><label for="qBudget">Estimated Budget (KES) *</label>
-            <select id="qBudget" name="budget" required>
-              <option value="">Select…</option>
-              <option>Under KES 5M</option><option>KES 5M – 20M</option><option>KES 20M – 100M</option>
-              <option>KES 100M – 500M</option><option>Over KES 500M</option>
-            </select>
-          </div>
+          <div class="field"><label for="qType">Project Type *</label><select id="qType" name="projectType" required><option value="">Select…</option><option>Residential</option><option>Commercial</option><option>Hospitality</option><option>Industrial</option><option>Institutional</option><option>Infrastructure</option><option>Other</option></select></div>
+          <div class="field"><label for="qBudget">Estimated Budget (KES) *</label><select id="qBudget" name="budget" required><option value="">Select…</option><option>Under KES 5M</option><option>KES 5M – 20M</option><option>KES 20M – 100M</option><option>KES 100M – 500M</option><option>Over KES 500M</option></select></div>
           <div class="field"><label for="qStart">Expected Start Date</label><input id="qStart" name="startDate" type="date"></div>
           <div class="field full"><label for="qServices">Services Required</label>
             <select id="qServices" name="services" multiple size="6" style="min-height:150px">
-              <option>Quantity Surveying</option>
-              <option>Cost Planning &amp; Cost Management</option>
-              <option>Bills of Quantities</option>
-              <option>Tender &amp; Procurement</option>
-              <option>Contract Administration</option>
-              <option>Project Cost Consultancy</option>
-              <option>Construction Cost Control</option>
-              <option>Commercial Management</option>
+              <option>Quantity Surveying</option><option>Cost Planning &amp; Cost Management</option><option>Bills of Quantities</option><option>Tender &amp; Procurement</option><option>Contract Administration</option><option>Project Cost Consultancy</option><option>Construction Cost Control</option><option>Commercial Management</option>
             </select>
             <span class="file-note">Hold Ctrl / Cmd to select multiple services.</span>
           </div>
-          <div class="field full"><label for="qDescription">Project Description *</label><textarea id="qDescription" name="description" required placeholder="Describe your project — scope, size, stage, timeline, any specific requirements…"></textarea></div>
+          <div class="field full"><label for="qDescription">Project Description *</label><textarea id="qDescription" name="description" required placeholder="Describe your project…"></textarea></div>
           <div class="field full"><label for="qFiles">Upload Project Documents</label>
             <input id="qFiles" name="documents" type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png">
             <span class="file-note" data-file-label>No file selected</span>
-            <span class="file-note">Accepted: PDF, DOC, DOCX, XLS, XLSX, JPG, PNG. Files are not uploaded in this demo — connect a backend endpoint to enable uploads.</span>
+            <span class="file-note">Accepted: PDF, DOC, DOCX, XLS, XLSX, JPG, PNG.</span>
           </div>
         </div>
         <button class="btn btn-gold" id="sendQuoteBtn" type="submit" style="margin-top:1.6rem">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
@@ -1047,7 +954,8 @@ p{color:var(--muted)}
   <div class="container footer-top">
     <div class="footer-brand">
       <a class="brand brand--footer" href="#home" aria-label="MY QS home">
-        <img class="brand-logo" src="assets/images/logo/my-qs-logo.png" alt="MY QS logo" onerror="this.style.display='none';">
+        <!-- IMAGE KEY: IMG_FOOTER_LOGO  →  edit in IMAGE_MAP -->
+        <img class="brand-logo" data-img="IMG_FOOTER_LOGO" alt="MY QS logo" onerror="this.style.display='none';">
       </a>
       <p>MY QS is a Kenyan quantity surveying and construction cost consultancy helping clients control costs, manage commercial risk and maximise project value.</p>
       <div class="footer-social">
@@ -1069,18 +977,12 @@ p{color:var(--muted)}
     <nav class="footer-col" aria-label="Company">
       <h3>Company</h3>
       <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#insights">Insights</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#quote">Request a Quote</a></li>
+        <li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li><li><a href="#insights">Insights</a></li>
+        <li><a href="#contact">Contact</a></li><li><a href="#quote">Request a Quote</a></li>
       </ul>
     </nav>
-    <nav class="footer-col" aria-label="Services">
-      <h3>Services</h3>
-      <ul id="footerServicesList"></ul>
-    </nav>
+    <nav class="footer-col" aria-label="Services"><h3>Services</h3><ul id="footerServicesList"></ul></nav>
     <div class="footer-col footer-contact">
       <h3>Contact</h3>
       <ul>
@@ -1095,10 +997,7 @@ p{color:var(--muted)}
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <p>&copy; <span id="year">2026</span> MY QS. All Rights Reserved.</p>
-      <ul>
-        <li><a href="#privacy">Privacy Policy</a></li>
-        <li><a href="#terms">Terms &amp; Conditions</a></li>
-      </ul>
+      <ul><li><a href="#privacy">Privacy Policy</a></li><li><a href="#terms">Terms &amp; Conditions</a></li></ul>
     </div>
   </div>
 </footer>
@@ -1112,7 +1011,93 @@ p{color:var(--muted)}
 (function () {
   'use strict';
 
-  /* 1. DATA — EDIT WEBSITE CONTENT HERE */
+  /* ╔══════════════════════════════════════════════════════════════════╗
+     ║                                                                  ║
+     ║   ★★★   IMAGE_MAP — EDIT ALL IMAGE PATHS HERE   ★★★              ║
+     ║                                                                  ║
+     ║   This is the ONLY place you need to edit for images.            ║
+     ║                                                                  ║
+     ║   HOW TO REPLACE AN IMAGE:                                       ║
+     ║   1. Copy your image next to index.html (easiest) OR             ║
+     ║      Use the full path (see Windows format below)                ║
+     ║   2. Change the path on the right of the key you want            ║
+     ║   3. Save the file. Reload the page.                             ║
+     ║                                                                  ║
+     ║   WINDOWS PATH EXAMPLES:                                         ║
+     ║   Original:  C:\Users\PRIMEHOUSE 1\Downloads\myimage.png         ║
+     ║   Correct:   file:///C:/Users/PRIMEHOUSE%201/Downloads/myimage.png║
+     ║                                                                  ║
+     ║   Rules:  \ → /      space → %20      add file:/// at start      ║
+     ║                                                                  ║
+     ║   ★ RECOMMENDED: Copy the image into the SAME folder as          ║
+     ║     index.html and just write the filename:                      ║
+     ║         myimage.png                                              ║
+     ║                                                                  ║
+     ╚══════════════════════════════════════════════════════════════════╝ */
+
+  const IMAGE_MAP = {
+
+    /* ─── BRAND / LOGO ─────────────────────────────────────── */
+    'IMG_HEADER_LOGO':            'assets/images/logo/my-qs-logo.png',
+    'IMG_FOOTER_LOGO':            'assets/images/logo/my-qs-logo.png',
+
+    /* ─── HOME PAGE ────────────────────────────────────────── */
+    'IMG_HERO_MAIN':              'assets/images/hero/hero-main.jpg',
+    'IMG_ABOUT_MAIN':             'assets/images/about/about-main.jpg',
+
+    /* ─── ABOUT PAGE ───────────────────────────────────────── */
+    'IMG_ABOUT_TEAM':             'assets/images/about/about-team.jpg',
+
+    /* ─── PROJECTS (main card image for each) ──────────────── */
+    'IMG_PROJECT_01':             'assets/images/projects/project-residential-01.jpg',
+    'IMG_PROJECT_02':             'assets/images/projects/project-commercial-01.jpg',
+    'IMG_PROJECT_03':             'assets/images/projects/project-mixed-01.jpg',
+    'IMG_PROJECT_04':             'assets/images/projects/project-hospitality-01.jpg',
+    'IMG_PROJECT_05':             'assets/images/projects/project-industrial-01.jpg',
+    'IMG_PROJECT_06':             'assets/images/projects/project-institutional-01.jpg',
+    'IMG_PROJECT_07':             'assets/images/projects/project-infrastructure-01.jpg',
+    'IMG_PROJECT_08':             'assets/images/projects/project-residential-04.jpg',
+
+    /* ─── PROJECT GALLERY (extra images on project detail pages) */
+    'IMG_PROJECT_01_G2':          'assets/images/projects/project-residential-02.jpg',
+    'IMG_PROJECT_01_G3':          'assets/images/projects/project-residential-03.jpg',
+    'IMG_PROJECT_02_G2':          'assets/images/projects/project-commercial-02.jpg',
+
+    /* ─── INDUSTRIES (6 sector images) ─────────────────────── */
+    'IMG_INDUSTRY_COMMERCIAL':    'assets/images/industries/industry-commercial.jpg',
+    'IMG_INDUSTRY_RESIDENTIAL':   'assets/images/industries/industry-residential.jpg',
+    'IMG_INDUSTRY_HOSPITALITY':   'assets/images/industries/industry-hospitality.jpg',
+    'IMG_INDUSTRY_INDUSTRIAL':    'assets/images/industries/industry-industrial.jpg',
+    'IMG_INDUSTRY_INSTITUTIONAL': 'assets/images/industries/industry-institutional.jpg',
+    'IMG_INDUSTRY_INFRASTRUCTURE':'assets/images/industries/industry-infrastructure.jpg',
+
+    /* ─── BLOG / INSIGHTS (4 unique images) ────────────────── */
+    'IMG_BLOG_COST_CONTROL':      'assets/images/blog/blog-cost-control.jpg',
+    'IMG_BLOG_BOQ':               'assets/images/blog/blog-boq.jpg',
+    'IMG_BLOG_TENDERING':         'assets/images/blog/blog-tendering.jpg',
+    'IMG_BLOG_OVERRUNS':          'assets/images/blog/blog-overruns.jpg'
+  };
+
+  /* ── HYDRATE IMAGES: reads data-img="KEY" and sets src ── */
+  function hydrateImages(scope) {
+    (scope || document).querySelectorAll('img[data-img]').forEach(img => {
+      const key = img.getAttribute('data-img');
+      const path = IMAGE_MAP[key];
+      if (path) {
+        img.setAttribute('src', path);
+      } else {
+        console.warn('[MY QS] Missing image key in IMAGE_MAP:', key);
+      }
+    });
+  }
+  window.MYQS = window.MYQS || {};
+  window.MYQS.hydrateImages = hydrateImages;
+  window.MYQS.IMAGE_MAP = IMAGE_MAP;
+
+  /* ══════════════════════════════════════════════════════════════════
+     END OF IMAGE_MAP — site logic below
+     ══════════════════════════════════════════════════════════════════ */
+
   const siteStats = [
     { value: 10,  suffix: "+",  label: "Years of Experience" },
     { value: 250, suffix: "+",  label: "Projects Delivered" },
@@ -1121,111 +1106,56 @@ p{color:var(--muted)}
   ];
 
   const siteServices = [
-    { slug:"quantity-surveying", num:"01", icon:"fa-compass-drafting", title:"Quantity Surveying",
-      desc:"Cost planning, measurement, valuation and commercial management across the project lifecycle.",
-      intro:"Quantity surveying is the discipline of measuring, costing and managing construction work. Our quantity surveyors translate drawings and specifications into accurate quantities, then price them against current Kenyan market rates to produce defensible cost information.",
-      includes:["Elemental cost plans from concept design","Measured quantities from drawings and specifications","Pricing against current Kenyan market rates","Cash-flow forecasts across the construction period","Independent cost checks and benchmarking"],
-      deliverables:["Cost plan reports at each design stage","Measured Bills of Quantities","Cash-flow projections","Cost variance reports"],
-      process:["Review drawings and specifications","Measure and quantify elements","Price against market rates","Produce cost reports for the client team"],
-      priceFrom:"Quoted per project — dependent on size and stage" },
-    { slug:"cost-management", num:"02", icon:"fa-chart-line", title:"Cost Planning & Cost Management",
-      desc:"Budget development, cost control and financial forecasting that keeps projects on track.",
-      intro:"Cost management is what keeps a project financially viable from first sketch to final account. We build realistic budgets, track actual spend against plan, and flag variances early enough for the project team to act.",
-      includes:["Feasibility and order-of-cost estimates","Elemental cost plans as design develops","Budget setting and cost control baselines","Monthly cost reports","Change control and variance analysis"],
-      deliverables:["Feasibility cost estimates","Elemental cost plans","Monthly cost reports","Change registers"],
-      process:["Establish project brief and budget","Prepare cost plan","Monitor against baseline","Report and advise on variances"],
-      priceFrom:"Monthly retainer or per-stage appointment" },
-    { slug:"bills-of-quantities", num:"03", icon:"fa-file-invoice-dollar", title:"Bills of Quantities",
-      desc:"Preparation and management of detailed, accurate Bills of Quantities for tendering and construction.",
-      intro:"A Bill of Quantities is the single most important commercial document in a construction tender. Accurate BOQs give contractors a common basis to price, reduce tender queries, and provide a fair framework for valuing change.",
-      includes:["Full measured BOQs per SMM or agreed method","Preliminaries and preambles","Measured works in trade or elemental format","Tender-ready documentation","Post-tender BOQ reconciliation"],
-      deliverables:["Priced BOQ document","Measurement sheets","Tender issue pack","Tender comparison analysis"],
-      process:["Receive tender drawings and spec","Measure all work items","Draft BOQ","Issue to tenderers"],
-      priceFrom:"Fixed fee per BOQ" },
-    { slug:"tender-procurement", num:"04", icon:"fa-gavel", title:"Tender & Procurement",
-      desc:"Tender documentation, contractor evaluation and procurement advice for fair, defensible awards.",
-      intro:"Good procurement produces competitive pricing and a defensible audit trail. We prepare the tender pack, manage the query process, analyse returns, and recommend the award.",
-      includes:["Tender documentation preparation","Prequalification and shortlisting","Tender query management","Tender analysis and comparison","Award recommendation report"],
-      deliverables:["Tender documents","Tender analysis report","Award recommendation","Contract documents for signature"],
-      process:["Prepare tender pack","Issue to tenderers","Manage queries","Analyse returns","Recommend award"],
-      priceFrom:"Fixed fee per tender" },
-    { slug:"contract-administration", num:"05", icon:"fa-file-signature", title:"Contract Administration",
-      desc:"Contract management, valuations, variations and payment certification under recognised contract forms.",
-      intro:"Once a contractor is appointed, the contract must be administered properly. We manage valuations, variations, claims and payment certification under the agreed contract form — protecting both parties and preventing disputes.",
-      includes:["Interim valuations and payment certificates","Variation assessment and valuation","Claim review and recommendations","Contract correspondence management","Final account preparation"],
-      deliverables:["Monthly valuations","Payment certificates","Variation registers","Final account statement"],
-      process:["Contract award","Monthly measurement and valuation","Certify payments","Manage variations","Prepare final account"],
-      priceFrom:"Percentage of contract value or monthly fee" },
-    { slug:"project-cost-consultancy", num:"06", icon:"fa-briefcase", title:"Project Cost Consultancy",
-      desc:"Independent commercial advice throughout the project lifecycle, from inception to final account.",
-      intro:"Sometimes a client needs independent commercial input — not tied to any contractor or design team. We act as the client's cost advisor, providing strategic commercial oversight across the project.",
-      includes:["Independent cost reviews","Second-opinion on contractor pricing","Commercial risk assessment","Advisory on procurement strategy","Dispute avoidance support"],
-      deliverables:["Advisory reports","Cost reviews","Risk registers","Strategic recommendations"],
-      process:["Understand client position","Review current commercial situation","Provide independent advice","Support decision making"],
-      priceFrom:"Retainer or per-engagement" },
-    { slug:"construction-cost-control", num:"07", icon:"fa-shield-halved", title:"Construction Cost Control",
-      desc:"Live cost monitoring, change control and reporting to prevent overruns before they happen.",
-      intro:"Cost overruns don't happen at the end of a project — they accumulate quietly month by month. Our construction cost control service tracks committed cost, forecast final cost, and flags drift early.",
-      includes:["Committed cost tracking","Forecast-to-complete reporting","Change order impact analysis","Risk and contingency monitoring","Monthly cost reports to the client"],
-      deliverables:["Monthly cost reports","Committed cost schedules","Forecast final account","Change impact reports"],
-      process:["Establish cost baseline","Track commitments monthly","Update forecast","Report variances and actions"],
-      priceFrom:"Monthly fee during construction" },
-    { slug:"commercial-management", num:"08", icon:"fa-handshake", title:"Commercial Management",
-      desc:"Strategic commercial support, claims advice and dispute avoidance for clients and contractors.",
-      intro:"When commercial positions become contested, clear thinking and disciplined documentation matter most. We provide strategic commercial support to protect our clients' position.",
-      includes:["Claims preparation and defence","Commercial strategy advice","Contract interpretation","Negotiation support","Settlement and dispute support"],
-      deliverables:["Claim submissions","Commercial strategy reports","Negotiation briefs","Settlement recommendations"],
-      process:["Assess commercial position","Prepare or defend claims","Support negotiation","Document outcome"],
-      priceFrom:"Per engagement" }
+    { slug:"quantity-surveying", num:"01", icon:"fa-compass-drafting", title:"Quantity Surveying", desc:"Cost planning, measurement, valuation and commercial management across the project lifecycle.", intro:"Quantity surveying is the discipline of measuring, costing and managing construction work. Our quantity surveyors translate drawings and specifications into accurate quantities, then price them against current Kenyan market rates to produce defensible cost information.", includes:["Elemental cost plans from concept design","Measured quantities from drawings and specifications","Pricing against current Kenyan market rates","Cash-flow forecasts across the construction period","Independent cost checks and benchmarking"], deliverables:["Cost plan reports at each design stage","Measured Bills of Quantities","Cash-flow projections","Cost variance reports"], process:["Review drawings and specifications","Measure and quantify elements","Price against market rates","Produce cost reports for the client team"], priceFrom:"Quoted per project — dependent on size and stage" },
+    { slug:"cost-management", num:"02", icon:"fa-chart-line", title:"Cost Planning & Cost Management", desc:"Budget development, cost control and financial forecasting that keeps projects on track.", intro:"Cost management is what keeps a project financially viable from first sketch to final account. We build realistic budgets, track actual spend against plan, and flag variances early.", includes:["Feasibility and order-of-cost estimates","Elemental cost plans as design develops","Budget setting and cost control baselines","Monthly cost reports","Change control and variance analysis"], deliverables:["Feasibility cost estimates","Elemental cost plans","Monthly cost reports","Change registers"], process:["Establish project brief and budget","Prepare cost plan","Monitor against baseline","Report and advise on variances"], priceFrom:"Monthly retainer or per-stage appointment" },
+    { slug:"bills-of-quantities", num:"03", icon:"fa-file-invoice-dollar", title:"Bills of Quantities", desc:"Preparation and management of detailed, accurate Bills of Quantities for tendering and construction.", intro:"A Bill of Quantities is the single most important commercial document in a construction tender. Accurate BOQs give contractors a common basis to price and provide a fair framework for valuing change.", includes:["Full measured BOQs per SMM or agreed method","Preliminaries and preambles","Measured works in trade or elemental format","Tender-ready documentation","Post-tender BOQ reconciliation"], deliverables:["Priced BOQ document","Measurement sheets","Tender issue pack","Tender comparison analysis"], process:["Receive tender drawings and spec","Measure all work items","Draft BOQ","Issue to tenderers"], priceFrom:"Fixed fee per BOQ" },
+    { slug:"tender-procurement", num:"04", icon:"fa-gavel", title:"Tender & Procurement", desc:"Tender documentation, contractor evaluation and procurement advice for fair, defensible awards.", intro:"Good procurement produces competitive pricing and a defensible audit trail. We prepare the tender pack, manage the query process, analyse returns, and recommend the award.", includes:["Tender documentation preparation","Prequalification and shortlisting","Tender query management","Tender analysis and comparison","Award recommendation report"], deliverables:["Tender documents","Tender analysis report","Award recommendation","Contract documents for signature"], process:["Prepare tender pack","Issue to tenderers","Manage queries","Analyse returns","Recommend award"], priceFrom:"Fixed fee per tender" },
+    { slug:"contract-administration", num:"05", icon:"fa-file-signature", title:"Contract Administration", desc:"Contract management, valuations, variations and payment certification under recognised contract forms.", intro:"Once a contractor is appointed, the contract must be administered properly. We manage valuations, variations, claims and payment certification under the agreed contract form.", includes:["Interim valuations and payment certificates","Variation assessment and valuation","Claim review and recommendations","Contract correspondence management","Final account preparation"], deliverables:["Monthly valuations","Payment certificates","Variation registers","Final account statement"], process:["Contract award","Monthly measurement and valuation","Certify payments","Manage variations","Prepare final account"], priceFrom:"Percentage of contract value or monthly fee" },
+    { slug:"project-cost-consultancy", num:"06", icon:"fa-briefcase", title:"Project Cost Consultancy", desc:"Independent commercial advice throughout the project lifecycle, from inception to final account.", intro:"Sometimes a client needs independent commercial input — not tied to any contractor or design team. We act as the client's cost advisor, providing strategic commercial oversight.", includes:["Independent cost reviews","Second-opinion on contractor pricing","Commercial risk assessment","Advisory on procurement strategy","Dispute avoidance support"], deliverables:["Advisory reports","Cost reviews","Risk registers","Strategic recommendations"], process:["Understand client position","Review current commercial situation","Provide independent advice","Support decision making"], priceFrom:"Retainer or per-engagement" },
+    { slug:"construction-cost-control", num:"07", icon:"fa-shield-halved", title:"Construction Cost Control", desc:"Live cost monitoring, change control and reporting to prevent overruns before they happen.", intro:"Cost overruns don't happen at the end of a project — they accumulate quietly month by month. Our service tracks committed cost, forecast final cost, and flags drift early.", includes:["Committed cost tracking","Forecast-to-complete reporting","Change order impact analysis","Risk and contingency monitoring","Monthly cost reports to the client"], deliverables:["Monthly cost reports","Committed cost schedules","Forecast final account","Change impact reports"], process:["Establish cost baseline","Track commitments monthly","Update forecast","Report variances and actions"], priceFrom:"Monthly fee during construction" },
+    { slug:"commercial-management", num:"08", icon:"fa-handshake", title:"Commercial Management", desc:"Strategic commercial support, claims advice and dispute avoidance for clients and contractors.", intro:"When commercial positions become contested, clear thinking and disciplined documentation matter most. We provide strategic commercial support to protect our clients' position.", includes:["Claims preparation and defence","Commercial strategy advice","Contract interpretation","Negotiation support","Settlement and dispute support"], deliverables:["Claim submissions","Commercial strategy reports","Negotiation briefs","Settlement recommendations"], process:["Assess commercial position","Prepare or defend claims","Support negotiation","Document outcome"], priceFrom:"Per engagement" }
   ];
 
+  /* PROJECTS — each references imageKey + galleryKeys from IMAGE_MAP */
   const siteProjects = [
     { id:"p1", title:"Modern Residential Development", category:"Residential", location:"Nairobi, Kenya", service:"Quantity Surveying", value:"KES XXXM", status:"Completed",
-      image:"assets/images/projects/project-residential-01.jpg",
-      description:"Full quantity surveying and cost management services for a modern residential development in Nairobi, from feasibility through to final account.",
-      gallery:["assets/images/projects/project-residential-01.jpg","assets/images/projects/project-residential-02.jpg","assets/images/projects/project-residential-03.jpg"],
-      scope:"Appointed as quantity surveyor from concept design. Prepared elemental cost plans, full measured Bills of Quantities, ran the tender process, and administered the contract through to final account.",
+      imageKey:"IMG_PROJECT_01", galleryKeys:["IMG_PROJECT_01","IMG_PROJECT_01_G2","IMG_PROJECT_01_G3"],
+      description:"Full quantity surveying and cost management services for a modern residential development in Nairobi.",
+      scope:"Appointed from concept design. Prepared elemental cost plans, full measured Bills of Quantities, ran the tender process, and administered the contract through to final account.",
       outcome:"Project completed within the client's approved budget with no unresolved claims at final account." },
     { id:"p2", title:"Commercial Office Development", category:"Commercial", location:"Nairobi, Kenya", service:"Cost Management", value:"KES XXXM", status:"Ongoing",
-      image:"assets/images/projects/project-commercial-01.jpg",
+      imageKey:"IMG_PROJECT_02", galleryKeys:["IMG_PROJECT_02","IMG_PROJECT_02_G2"],
       description:"Cost planning and construction cost control for a commercial office development.",
-      gallery:["assets/images/projects/project-commercial-01.jpg","assets/images/projects/project-commercial-02.jpg"],
       scope:"Monthly cost management during construction, including valuations, variation assessment and monthly cost reporting.",
       outcome:"Ongoing — client cost reports issued monthly with forecast final account tracking within contingency." },
     { id:"p3", title:"Mixed-Use Development", category:"Commercial", location:"Kenya", service:"Cost Consultancy", value:"KES XXXM", status:"Completed",
-      image:"assets/images/projects/project-mixed-01.jpg",
+      imageKey:"IMG_PROJECT_03", galleryKeys:["IMG_PROJECT_03"],
       description:"Independent cost consultancy for a mixed-use retail and residential development.",
-      gallery:["assets/images/projects/project-mixed-01.jpg"],
-      scope:"Independent commercial review of contractor pricing and procurement strategy across a multi-phase mixed-use development.",
+      scope:"Independent commercial review of contractor pricing and procurement strategy across a multi-phase development.",
       outcome:"Client achieved measurable savings on the phase-1 contract through negotiated re-pricing." },
     { id:"p4", title:"Hospitality Lodge Project", category:"Hospitality", location:"Nakuru, Kenya", service:"Bills of Quantities", value:"KES XXXM", status:"Completed",
-      image:"assets/images/projects/project-hospitality-01.jpg",
+      imageKey:"IMG_PROJECT_04", galleryKeys:["IMG_PROJECT_04"],
       description:"BOQ preparation and tender support for a hospitality development.",
-      gallery:["assets/images/projects/project-hospitality-01.jpg"],
       scope:"Full measured Bills of Quantities for tendering, plus tender analysis and award recommendation.",
       outcome:"Tender run cleanly with a small number of priced queries; contract awarded within 3% of budget." },
     { id:"p5", title:"Industrial Warehouse Facility", category:"Industrial", location:"Athi River, Kenya", service:"Cost Management", value:"KES XXXM", status:"Ongoing",
-      image:"assets/images/projects/project-industrial-01.jpg",
+      imageKey:"IMG_PROJECT_05", galleryKeys:["IMG_PROJECT_05"],
       description:"Cost management and procurement support for an industrial warehouse facility.",
-      gallery:["assets/images/projects/project-industrial-01.jpg"],
       scope:"Ongoing cost management and procurement support on a large industrial facility.",
       outcome:"Ongoing — monthly reports issued, procurement strategy aligned to fast-track programme." },
     { id:"p6", title:"Institutional Building", category:"Institutional", location:"Kenya", service:"Contract Administration", value:"KES XXXM", status:"Completed",
-      image:"assets/images/projects/project-institutional-01.jpg",
+      imageKey:"IMG_PROJECT_06", galleryKeys:["IMG_PROJECT_06"],
       description:"Contract administration and valuation services for an institutional building.",
-      gallery:["assets/images/projects/project-institutional-01.jpg"],
       scope:"Contract administration including valuations, variations, and final account preparation under a standard form of contract.",
       outcome:"Final account agreed within the contingency allowance; no disputes." },
     { id:"p7", title:"Infrastructure Works Package", category:"Infrastructure", location:"Kenya", service:"Project Cost Consultancy", value:"KES XXXM", status:"Ongoing",
-      image:"assets/images/projects/project-infrastructure-01.jpg",
+      imageKey:"IMG_PROJECT_07", galleryKeys:["IMG_PROJECT_07"],
       description:"Project cost consultancy for an infrastructure works package.",
-      gallery:["assets/images/projects/project-infrastructure-01.jpg"],
       scope:"Independent cost consultancy and cost-control oversight across a multi-contract infrastructure package.",
       outcome:"Ongoing — package forecast tracking within budget." },
     { id:"p8", title:"Apartment Block Development", category:"Residential", location:"Kiambu, Kenya", service:"Quantity Surveying", value:"KES XXXM", status:"Completed",
-      image:"assets/images/projects/project-residential-04.jpg",
+      imageKey:"IMG_PROJECT_08", galleryKeys:["IMG_PROJECT_08"],
       description:"Quantity surveying and cost control for a multi-unit apartment development.",
-      gallery:["assets/images/projects/project-residential-04.jpg"],
       scope:"Quantity surveying appointment covering cost planning, BOQ preparation, tender support and post-contract cost control.",
       outcome:"Delivered within budget with no variation disputes." }
   ];
@@ -1239,13 +1169,14 @@ p{color:var(--muted)}
     { num:"06", title:"Completion",    desc:"Final accounts, close-out and cost review." }
   ];
 
+  /* INDUSTRIES — each references an imageKey from IMAGE_MAP */
   const siteIndustries = [
-    { icon:"fa-building",       title:"Commercial",     desc:"Office buildings and commercial developments.", image:"assets/images/industries/industry-commercial.jpg" },
-    { icon:"fa-house",          title:"Residential",    desc:"Homes, apartments and housing developments.",   image:"assets/images/industries/industry-residential.jpg" },
-    { icon:"fa-hotel",          title:"Hospitality",    desc:"Hotels, resorts and leisure developments.",     image:"assets/images/industries/industry-hospitality.jpg" },
-    { icon:"fa-industry",       title:"Industrial",     desc:"Factories, warehouses and industrial facilities.", image:"assets/images/industries/industry-industrial.jpg" },
-    { icon:"fa-graduation-cap", title:"Institutional",  desc:"Schools, hospitals and institutional buildings.", image:"assets/images/industries/industry-institutional.jpg" },
-    { icon:"fa-road",           title:"Infrastructure", desc:"Infrastructure and major development projects.", image:"assets/images/industries/industry-infrastructure.jpg" }
+    { icon:"fa-building",       title:"Commercial",     desc:"Office buildings and commercial developments.", imageKey:"IMG_INDUSTRY_COMMERCIAL" },
+    { icon:"fa-house",          title:"Residential",    desc:"Homes, apartments and housing developments.",   imageKey:"IMG_INDUSTRY_RESIDENTIAL" },
+    { icon:"fa-hotel",          title:"Hospitality",    desc:"Hotels, resorts and leisure developments.",     imageKey:"IMG_INDUSTRY_HOSPITALITY" },
+    { icon:"fa-industry",       title:"Industrial",     desc:"Factories, warehouses and industrial facilities.", imageKey:"IMG_INDUSTRY_INDUSTRIAL" },
+    { icon:"fa-graduation-cap", title:"Institutional",  desc:"Schools, hospitals and institutional buildings.", imageKey:"IMG_INDUSTRY_INSTITUTIONAL" },
+    { icon:"fa-road",           title:"Infrastructure", desc:"Infrastructure and major development projects.", imageKey:"IMG_INDUSTRY_INFRASTRUCTURE" }
   ];
 
   const siteTeam = [
@@ -1261,84 +1192,40 @@ p{color:var(--muted)}
     { quote:"A reliable quantity surveying partner for our construction projects in Kenya.", name:"Client Name", role:"Contractor" }
   ];
 
+  /* INSIGHTS — each references an imageKey from IMAGE_MAP */
   const siteInsights = [
-    { id:"a1", title:"Understanding the Role of a Quantity Surveyor in Kenya", category:"Guides", date:"12 Jan 2026",
-      image:"assets/images/blog/blog-cost-control.jpg",
-      excerpt:"What a quantity surveyor actually does on a Kenyan construction project — and why their input matters from day one.",
-      body:`<p>A quantity surveyor (QS) is the construction industry's cost and commercial specialist. On a Kenyan construction project, the QS is the person responsible for measuring the work, forecasting what it will cost, and managing the commercial relationship between the client and the contractor.</p>
-        <h2>What a QS actually does</h2>
-        <p>At the start of a project, a QS prepares cost estimates and elemental cost plans so the client knows whether the brief is affordable. As design develops, the QS prepares measured Bills of Quantities — the detailed pricing document that contractors tender against.</p>
-        <p>During construction, the QS values the work done, certifies payments, assesses variations, and monitors the cost against the budget. At the end of the project, the QS prepares the final account.</p>
-        <h2>Why a QS matters in Kenya</h2>
-        <p>Kenyan construction projects face real cost pressures — fluctuating material prices, currency exposure on imported finishes, and programme pressure. A QS who understands these dynamics is worth their fee many times over.</p>
-        <blockquote>Hiring a QS at concept stage is almost always cheaper than hiring one to clean up cost problems at the end.</blockquote>
-        <h2>When to appoint a QS</h2>
-        <p>The right time to appoint a QS is at feasibility — before the design starts. Early involvement means the brief is calibrated to a realistic budget from the outset.</p>
-        <h2>Conclusion</h2>
-        <p>A quantity surveyor is not an optional extra on a Kenyan construction project — they are the professional whose job is to protect the client's commercial position.</p>` },
-    { id:"a2", title:"How Quantity Surveyors Help Control Construction Costs", category:"Cost Management", date:"28 Feb 2026",
-      image:"assets/images/blog/blog-boq.jpg",
-      excerpt:"Practical ways professional cost management reduces overruns on residential and commercial developments.",
-      body:`<p>Cost overruns are rarely caused by one big mistake. They accumulate — a variation here, an underestimated material there, a programme slip that adds preliminaries. A quantity surveyor's job is to catch that drift before it becomes a crisis.</p>
-        <h2>1. Establish a realistic baseline</h2>
-        <p>Every cost control exercise begins with a baseline — an elemental cost plan that reflects the actual design and current Kenyan market rates.</p>
-        <h2>2. Measure and value monthly</h2>
-        <p>Monthly valuations keep the commercial position current. The QS measures work done, certifies payment, and reconciles against the baseline.</p>
-        <h2>3. Assess variations as they arise</h2>
-        <p>Variations assessed at the time they occur are cheap to resolve. Variations left to the end of a project become claims.</p>
-        <blockquote>Cost control is not about spending less. It's about knowing, at any moment, what the project will cost.</blockquote>` },
-    { id:"a3", title:"Understanding Bills of Quantities", category:"Guides", date:"15 Mar 2026",
-      image:"assets/images/blog/blog-tendering.jpg",
-      excerpt:"A plain-language explanation of BOQs, how they are prepared, and how they are used during tendering.",
-      body:`<p>A Bill of Quantities (BOQ) is the document that lists and measures all the work in a construction project, so that every contractor tenders on the same basis.</p>
-        <h2>What's in a BOQ</h2>
-        <p>A typical BOQ contains: preliminaries, measured works organised by trade or element, and preambles explaining the basis of measurement.</p>
-        <h2>How a BOQ is prepared</h2>
-        <p>The QS takes the tender drawings, specification and any structural or services information, and measures the quantities of each work item.</p>
-        <h2>Why BOQs matter post-tender</h2>
-        <p>After award, the priced BOQ becomes the basis for valuing work done and assessing variations.</p>` },
-    { id:"a4", title:"Managing Construction Cost Overruns", category:"Cost Management", date:"02 Apr 2026",
-      image:"assets/images/blog/blog-overruns.jpg",
-      excerpt:"Common causes of cost overruns in Kenya and the commercial controls that prevent them.",
-      body:`<p>Cost overruns happen. What separates well-run projects from poorly-run ones is how early the overrun is identified and how effectively it is controlled.</p>
-        <h2>Common causes in Kenya</h2>
-        <ul><li>Underestimated budgets at feasibility</li><li>Design changes late in construction</li><li>Material price movement during the project</li><li>Programme extensions and additional preliminaries</li><li>Scope creep not formally documented</li></ul>
-        <h2>The controls that work</h2>
-        <p>Monthly valuations, variation registers, forecast final account reporting, and a change control process that requires written approval before work proceeds.</p>
-        <blockquote>The best time to control an overrun is the month it begins, not the month it ends.</blockquote>` },
-    { id:"a5", title:"Construction Cost Planning in Kenya", category:"Cost Management", date:"19 Apr 2026",
-      image:"assets/images/blog/blog-cost-control.jpg",
-      excerpt:"How early-stage cost planning shapes the financial success of a Kenyan construction project.",
-      body:`<p>Cost planning is what happens before construction starts — the process of turning a brief and a design into a realistic, staged budget.</p>
-        <h2>Stage 1 — Feasibility estimate</h2>
-        <p>At concept stage, the QS produces an order-of-cost estimate based on comparable projects and current market rates.</p>
-        <h2>Stage 2 — Elemental cost plan</h2>
-        <p>As design develops, the QS produces elemental cost plans that become the design team's budget framework.</p>
-        <h2>Stage 3 — Pre-tender estimate</h2>
-        <p>Just before tender, the QS updates the cost plan to reflect the final design, giving the client a defensible pre-tender estimate.</p>` },
-    { id:"a6", title:"Tendering and Procurement Best Practices", category:"Procurement", date:"08 May 2026",
-      image:"assets/images/blog/blog-tendering.jpg",
-      excerpt:"Improving tender documentation, evaluation and contractor appointment for better project outcomes.",
-      body:`<p>Procurement is the process of selecting the contractor who will build the project. A well-run procurement produces competitive pricing, a clear contract and a defensible audit trail.</p>
-        <h2>Prepare the tender pack properly</h2>
-        <p>The tender pack should include: drawings, specification, conditions of contract, BOQ, and any special requirements.</p>
-        <h2>Give tenderers enough time</h2>
-        <p>Short tender periods favour contractors who price high to cover risk. Allowing realistic periods produces tighter pricing.</p>
-        <h2>Answer queries formally</h2>
-        <p>All tender queries should be answered in writing, with answers issued to all tenderers.</p>
-        <blockquote>Procurement is not a race to the lowest number — it's a search for the best commercial package.</blockquote>` }
+    { id:"a1", title:"Understanding the Role of a Quantity Surveyor in Kenya", category:"Guides", date:"12 Jan 2026", imageKey:"IMG_BLOG_COST_CONTROL", excerpt:"What a quantity surveyor actually does on a Kenyan construction project — and why their input matters from day one.",
+      body:`<p>A quantity surveyor (QS) is the construction industry's cost and commercial specialist. On a Kenyan construction project, the QS is responsible for measuring the work, forecasting what it will cost, and managing the commercial relationship between the client and the contractor.</p><h2>What a QS actually does</h2><p>At the start of a project, a QS prepares cost estimates and elemental cost plans so the client knows whether the brief is affordable. As design develops, the QS prepares measured Bills of Quantities — the detailed pricing document that contractors tender against.</p><p>During construction, the QS values the work done, certifies payments, assesses variations, and monitors the cost against the budget.</p><h2>Why a QS matters in Kenya</h2><p>Kenyan construction projects face real cost pressures — fluctuating material prices, currency exposure on imported finishes, and programme pressure. A QS who understands these dynamics is worth their fee many times over.</p><blockquote>Hiring a QS at concept stage is almost always cheaper than hiring one to clean up cost problems at the end.</blockquote><h2>Conclusion</h2><p>A quantity surveyor is not an optional extra on a Kenyan construction project — they are the professional whose job is to protect the client's commercial position.</p>` },
+    { id:"a2", title:"How Quantity Surveyors Help Control Construction Costs", category:"Cost Management", date:"28 Feb 2026", imageKey:"IMG_BLOG_BOQ", excerpt:"Practical ways professional cost management reduces overruns on residential and commercial developments.",
+      body:`<p>Cost overruns are rarely caused by one big mistake. They accumulate — a variation here, an underestimated material there. A quantity surveyor's job is to catch that drift before it becomes a crisis.</p><h2>1. Establish a realistic baseline</h2><p>Every cost control exercise begins with a baseline — an elemental cost plan that reflects the actual design and current Kenyan market rates.</p><h2>2. Measure and value monthly</h2><p>Monthly valuations keep the commercial position current.</p><h2>3. Assess variations as they arise</h2><p>Variations assessed at the time they occur are cheap to resolve.</p><blockquote>Cost control is not about spending less. It's about knowing, at any moment, what the project will cost.</blockquote>` },
+    { id:"a3", title:"Understanding Bills of Quantities", category:"Guides", date:"15 Mar 2026", imageKey:"IMG_BLOG_TENDERING", excerpt:"A plain-language explanation of BOQs, how they are prepared, and how they are used during tendering.",
+      body:`<p>A Bill of Quantities (BOQ) is the document that lists and measures all the work in a construction project, so that every contractor tenders on the same basis.</p><h2>What's in a BOQ</h2><p>A typical BOQ contains: preliminaries, measured works organised by trade or element, and preambles explaining the basis of measurement.</p><h2>How a BOQ is prepared</h2><p>The QS takes the tender drawings, specification and any structural or services information, and measures the quantities of each work item.</p><h2>Why BOQs matter post-tender</h2><p>After award, the priced BOQ becomes the basis for valuing work done and assessing variations.</p>` },
+    { id:"a4", title:"Managing Construction Cost Overruns", category:"Cost Management", date:"02 Apr 2026", imageKey:"IMG_BLOG_OVERRUNS", excerpt:"Common causes of cost overruns in Kenya and the commercial controls that prevent them.",
+      body:`<p>Cost overruns happen. What separates well-run projects from poorly-run ones is how early the overrun is identified and how effectively it is controlled.</p><h2>Common causes in Kenya</h2><ul><li>Underestimated budgets at feasibility</li><li>Design changes late in construction</li><li>Material price movement during the project</li><li>Programme extensions and additional preliminaries</li><li>Scope creep not formally documented</li></ul><h2>The controls that work</h2><p>Monthly valuations, variation registers, forecast final account reporting, and a change control process that requires written approval before work proceeds.</p><blockquote>The best time to control an overrun is the month it begins, not the month it ends.</blockquote>` },
+    { id:"a5", title:"Construction Cost Planning in Kenya", category:"Cost Management", date:"19 Apr 2026", imageKey:"IMG_BLOG_COST_CONTROL", excerpt:"How early-stage cost planning shapes the financial success of a Kenyan construction project.",
+      body:`<p>Cost planning is what happens before construction starts — the process of turning a brief and a design into a realistic, staged budget.</p><h2>Stage 1 — Feasibility estimate</h2><p>At concept stage, the QS produces an order-of-cost estimate based on comparable projects and current market rates.</p><h2>Stage 2 — Elemental cost plan</h2><p>As design develops, the QS produces elemental cost plans that become the design team's budget framework.</p><h2>Stage 3 — Pre-tender estimate</h2><p>Just before tender, the QS updates the cost plan to reflect the final design.</p>` },
+    { id:"a6", title:"Tendering and Procurement Best Practices", category:"Procurement", date:"08 May 2026", imageKey:"IMG_BLOG_TENDERING", excerpt:"Improving tender documentation, evaluation and contractor appointment for better project outcomes.",
+      body:`<p>Procurement is the process of selecting the contractor who will build the project.</p><h2>Prepare the tender pack properly</h2><p>The tender pack should include: drawings, specification, conditions of contract, BOQ, and any special requirements.</p><h2>Give tenderers enough time</h2><p>Short tender periods favour contractors who price high to cover risk.</p><h2>Answer queries formally</h2><p>All tender queries should be answered in writing, with answers issued to all tenderers.</p><blockquote>Procurement is not a race to the lowest number — it's a search for the best commercial package.</blockquote>` }
   ];
 
-  /* 2. HELPERS */
+  /* ============================================================
+     HELPERS
+     ============================================================ */
   const $  = (s, c) => (c || document).querySelector(s);
   const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  const imgPath = key => IMAGE_MAP[key] || '';
 
-  function imgWithFallback(src, alt, extra) {
+  /* Dynamic img with key — for JS-rendered cards */
+  function keyedImg(key, alt, extra) {
+    const src = imgPath(key);
     return `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" ${extra||''}
       onerror="this.style.background='linear-gradient(135deg,#0D294A,#58789D)';this.removeAttribute('src');this.alt='MY QS';">`;
   }
 
+  /* ============================================================
+     RENDER FUNCTIONS
+     ============================================================ */
   function renderMetrics() {
     const grid = $('#metricsGrid'); if (!grid) return;
     grid.innerHTML = siteStats.map((s, i) => `
@@ -1399,7 +1286,7 @@ p{color:var(--muted)}
     return `
       <a class="project-card reveal" href="#project-details/${esc(p.id)}" aria-label="View ${esc(p.title)}">
         <div class="project-card-media">
-          ${imgWithFallback(p.image, p.title + ' — ' + p.category + ' project in ' + p.location)}
+          ${keyedImg(p.imageKey, p.title + ' — ' + p.category + ' project in ' + p.location)}
           <span class="project-card-overlay" aria-hidden="true"></span>
           <div class="project-card-body">
             <span class="project-card-cat">${esc(p.category)}</span>
@@ -1430,9 +1317,7 @@ p{color:var(--muted)}
       const list = (!cat || cat === 'All') ? siteProjects : siteProjects.filter(p => p.category === cat);
       grid.style.opacity = '0';
       setTimeout(() => {
-        grid.innerHTML = list.length
-          ? list.map(projectCardHTML).join('')
-          : '<p style="grid-column:1/-1;text-align:center;padding:2rem 0;color:var(--muted)">No projects in this category yet.</p>';
+        grid.innerHTML = list.length ? list.map(projectCardHTML).join('') : '<p style="grid-column:1/-1;text-align:center;padding:2rem 0;color:var(--muted)">No projects in this category yet.</p>';
         grid.style.opacity = '1';
         revealInjected();
       }, 160);
@@ -1455,8 +1340,7 @@ p{color:var(--muted)}
     const next = siteProjects[(idx + 1) % siteProjects.length];
     document.title = project.title + ' | MY QS Projects';
 
-    const metaItem = (label, value) => `
-      <div class="meta-item"><span class="label">${esc(label)}</span><span class="value">${esc(value)}</span></div>`;
+    const metaItem = (label, value) => `<div class="meta-item"><span class="label">${esc(label)}</span><span class="value">${esc(value)}</span></div>`;
 
     root.innerHTML = `
       <div class="page-hero">
@@ -1470,7 +1354,7 @@ p{color:var(--muted)}
       <div class="section">
         <div class="container">
           <div style="margin-bottom:2.5rem;overflow:hidden;border-radius:2px">
-            ${imgWithFallback(project.image, project.title, 'style="width:100%;height:auto;max-height:640px;object-fit:cover" loading="eager"')}
+            ${keyedImg(project.imageKey, project.title, 'style="width:100%;height:auto;max-height:640px;object-fit:cover" loading="eager"')}
           </div>
           <div class="project-meta-grid">
             ${metaItem('Location', project.location)}
@@ -1481,24 +1365,16 @@ p{color:var(--muted)}
             ${metaItem('Status', project.status)}
           </div>
           <div class="split-grid" style="margin-bottom:3rem;align-items:start">
-            <div>
-              <span class="section-label">Scope</span>
-              <h2 style="font-size:1.4rem;margin-bottom:1rem">Our appointment</h2>
-              <p>${esc(project.scope || 'Full appointment details available on request.')}</p>
-            </div>
-            <div>
-              <span class="section-label">Outcome</span>
-              <h2 style="font-size:1.4rem;margin-bottom:1rem">Result</h2>
-              <p>${esc(project.outcome || 'Project completed successfully.')}</p>
-            </div>
+            <div><span class="section-label">Scope</span><h2 style="font-size:1.4rem;margin-bottom:1rem">Our appointment</h2><p>${esc(project.scope || 'Full appointment details available on request.')}</p></div>
+            <div><span class="section-label">Outcome</span><h2 style="font-size:1.4rem;margin-bottom:1rem">Result</h2><p>${esc(project.outcome || 'Project completed successfully.')}</p></div>
           </div>
           <div style="margin-bottom:3rem">
             <span class="section-label">Project Gallery</span>
             <h2 style="font-size:1.5rem;margin-bottom:1.4rem">Images from this project</h2>
             <div class="project-gallery" id="projectGallery">
-              ${(project.gallery || [project.image]).map((src, i) => `
-                <button class="gallery-item" data-src="${esc(src)}" data-index="${i}" type="button" aria-label="View image ${i+1}">
-                  ${imgWithFallback(src, project.title + ' — image ' + (i+1))}
+              ${(project.galleryKeys || [project.imageKey]).map((key, i) => `
+                <button class="gallery-item" data-src="${esc(imgPath(key))}" data-index="${i}" type="button" aria-label="View image ${i+1}">
+                  ${keyedImg(key, project.title + ' — image ' + (i+1))}
                 </button>`).join('')}
             </div>
           </div>
@@ -1537,19 +1413,11 @@ p{color:var(--muted)}
       </div>
       <div class="section">
         <div class="container split-grid" style="align-items:start">
-          <div>
-            <span class="section-label">What's Included</span>
-            <h2 style="font-size:1.4rem;margin-bottom:1rem">Scope of service</h2>
-            <ul class="deliverables-list">
-              ${service.includes.map(item => `<li><i class="fa-solid fa-check"></i><span>${esc(item)}</span></li>`).join('')}
-            </ul>
+          <div><span class="section-label">What's Included</span><h2 style="font-size:1.4rem;margin-bottom:1rem">Scope of service</h2>
+            <ul class="deliverables-list">${service.includes.map(item => `<li><i class="fa-solid fa-check"></i><span>${esc(item)}</span></li>`).join('')}</ul>
           </div>
-          <div>
-            <span class="section-label">What You Receive</span>
-            <h2 style="font-size:1.4rem;margin-bottom:1rem">Deliverables</h2>
-            <ul class="deliverables-list">
-              ${service.deliverables.map(item => `<li><i class="fa-solid fa-file-lines"></i><span>${esc(item)}</span></li>`).join('')}
-            </ul>
+          <div><span class="section-label">What You Receive</span><h2 style="font-size:1.4rem;margin-bottom:1rem">Deliverables</h2>
+            <ul class="deliverables-list">${service.deliverables.map(item => `<li><i class="fa-solid fa-file-lines"></i><span>${esc(item)}</span></li>`).join('')}</ul>
           </div>
         </div>
       </div>
@@ -1565,14 +1433,8 @@ p{color:var(--muted)}
           <div class="cta-band" style="border-radius:2px">
             <div class="cta-blueprint" aria-hidden="true"></div>
             <div class="container cta-inner" style="padding:0">
-              <div>
-                <h2 class="cta-title">Need ${esc(service.title.toLowerCase())}?</h2>
-                <p class="cta-copy">${esc(service.priceFrom)}</p>
-              </div>
-              <div class="cta-actions">
-                <a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#contact" class="btn btn-outline-light">Contact Us</a>
-              </div>
+              <div><h2 class="cta-title">Need ${esc(service.title.toLowerCase())}?</h2><p class="cta-copy">${esc(service.priceFrom)}</p></div>
+              <div class="cta-actions"><a href="#quote" class="btn btn-gold">Request a Quote <i class="fa-solid fa-arrow-right"></i></a><a href="#contact" class="btn btn-outline-light">Contact Us</a></div>
             </div>
           </div>
         </div>
@@ -1581,20 +1443,13 @@ p{color:var(--muted)}
         <div class="container">
           <span class="section-label">Related Services</span>
           <h2 class="section-title" style="margin-bottom:2rem">Other services you may need</h2>
-          <div class="services-grid" id="relatedServicesGrid">
-            ${related.map(serviceCardHTML).join('')}
-          </div>
+          <div class="services-grid">${related.map(serviceCardHTML).join('')}</div>
         </div>
       </div>`;
 
     const track = $('#serviceProcessTrack');
-    if (track) {
-      track.innerHTML = service.process.map((step, i) => `
-        <li class="process-step reveal">
-          <div class="process-dot">${String(i+1).padStart(2,'0')}</div>
-          <div><h3>${esc(step)}</h3></div>
-        </li>`).join('');
-    }
+    if (track) track.innerHTML = service.process.map((step, i) => `
+      <li class="process-step reveal"><div class="process-dot">${String(i+1).padStart(2,'0')}</div><div><h3>${esc(step)}</h3></div></li>`).join('');
     revealInjected(); activateProcess();
   }
 
@@ -1620,7 +1475,7 @@ p{color:var(--muted)}
     const grid = $('#industriesGrid'); if (!grid) return;
     grid.innerHTML = siteIndustries.map(ind => `
       <a class="industry-card reveal" href="#projects" aria-label="${esc(ind.title)} projects">
-        ${imgWithFallback(ind.image, ind.title + ' construction projects in Kenya')}
+        ${keyedImg(ind.imageKey, ind.title + ' construction projects in Kenya')}
         <span class="industry-overlay" aria-hidden="true"></span>
         <div class="industry-body">
           <span class="industry-icon"><i class="fa-solid ${esc(ind.icon)}"></i></span>
@@ -1672,7 +1527,7 @@ p{color:var(--muted)}
     return `
       <a class="insight-card reveal" href="#article-details/${esc(a.id)}" aria-label="Read: ${esc(a.title)}">
         <div class="insight-media">
-          ${imgWithFallback(a.image, a.title)}
+          ${keyedImg(a.imageKey, a.title)}
           <span class="insight-cat">${esc(a.category)}</span>
         </div>
         <div class="insight-body">
@@ -1707,7 +1562,7 @@ p{color:var(--muted)}
       <div class="section">
         <div class="container">
           <div style="margin-bottom:2.5rem;overflow:hidden;border-radius:2px;max-width:900px;margin-left:auto;margin-right:auto">
-            ${imgWithFallback(article.image, article.title, 'style="width:100%;height:auto;max-height:520px;object-fit:cover" loading="eager"')}
+            ${keyedImg(article.imageKey, article.title, 'style="width:100%;height:auto;max-height:520px;object-fit:cover" loading="eager"')}
           </div>
           <article class="article-body">${article.body || '<p>' + esc(article.excerpt) + '</p>'}</article>
           <div style="max-width:760px;margin:3rem auto 0;padding-top:2rem;border-top:1px solid var(--grey-100);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center">
@@ -1728,16 +1583,16 @@ p{color:var(--muted)}
 
   function revealInjected() {
     const els = $$('.reveal:not(.is-in)'); if (!els.length) return;
-    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      els.forEach(el => el.classList.add('is-in')); return;
-    }
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { els.forEach(el => el.classList.add('is-in')); return; }
     const io = new IntersectionObserver((entries, obs) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     els.forEach(el => io.observe(el));
   }
 
-  /* 3. ROUTER */
+  /* ============================================================
+     ROUTER
+     ============================================================ */
   const PAGES = ['home','about','services','service-details','projects','project-details','insights','article-details','contact','quote'];
   const TITLES = {
     home:'MY QS | Quantity Surveying & Construction Cost Consultancy in Kenya',
@@ -1780,7 +1635,9 @@ p{color:var(--muted)}
     });
   }
 
-  /* 4. UI */
+  /* ============================================================
+     UI INTERACTIONS
+     ============================================================ */
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -1794,14 +1651,12 @@ p{color:var(--muted)}
   onScroll();
 
   const toggle = $('#navToggle'), nav = $('#mainNav');
-
   function closeNav() {
     if (!nav || !toggle) return;
     nav.classList.remove('is-open'); toggle.classList.remove('is-open');
     toggle.setAttribute('aria-expanded','false');
     document.body.classList.remove('nav-open');
   }
-
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('is-open');
@@ -1843,8 +1698,7 @@ p{color:var(--muted)}
   function lbOpen(src, list, startIdx) {
     lbItems = Array.isArray(list) && list.length ? list.slice() : [src];
     lbIdx = startIdx != null ? startIdx : Math.max(0, lbItems.indexOf(src));
-    lbUpdate();
-    lb.classList.add('is-open'); lb.setAttribute('aria-hidden','false');
+    lbUpdate(); lb.classList.add('is-open'); lb.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
   }
   function lbClose() {
@@ -1861,10 +1715,9 @@ p{color:var(--muted)}
     if (e.key === 'ArrowRight') { lbIdx = (lbIdx + 1) % lbItems.length; lbUpdate(); }
     if (e.key === 'ArrowLeft')  { lbIdx = (lbIdx - 1 + lbItems.length) % lbItems.length; lbUpdate(); }
   });
-  window.MYQS = window.MYQS || {};
   window.MYQS.openLightbox = lbOpen;
 
-  /* 5. FORMS */
+  /* FORMS */
   function attachValidation(form, buttonId, statusId) {
     if (!form) return;
     const button = document.getElementById(buttonId) || form.querySelector('button[type="submit"]');
@@ -1893,15 +1746,11 @@ p{color:var(--muted)}
     };
     form.addEventListener('submit', async e => {
       e.preventDefault();
-      if (!validate()) {
-        if (status) { status.textContent = 'Please correct the highlighted fields.'; status.className = 'form-status is-error'; }
-        return;
-      }
+      if (!validate()) { if (status) { status.textContent = 'Please correct the highlighted fields.'; status.className = 'form-status is-error'; } return; }
       if (button) { button.disabled = true; button.dataset.label = button.innerHTML; button.innerHTML = 'Sending…'; }
       if (status) { status.textContent = ''; status.className = 'form-status'; }
       try {
         // ===== BACKEND INTEGRATION POINT =====
-        // await fetch('/api/enquiry', { method:'POST', body: new FormData(form) });
         await new Promise(res => setTimeout(res, 900));
         if (status) { status.textContent = 'Thank you — your enquiry has been received. We will respond within one business day.'; status.className = 'form-status is-success'; }
         form.reset();
@@ -1932,11 +1781,21 @@ p{color:var(--muted)}
     });
   }
 
-  /* 6. BOOT */
+  /* ============================================================
+     BOOT
+     ============================================================ */
   function boot() {
+    // ★ Hydrate static HTML images (header, hero, about, footer) FIRST
+    hydrateImages(document);
+
+    // Then render dynamic sections
     renderMetrics(); renderServices(); renderFooterServices();
     renderFeaturedProjects(); renderProjectsPage(); renderProcess();
     renderIndustries(); renderTeam(); renderTestimonials(); renderInsights();
+
+    // ★ Hydrate again — dynamic sections inject new <img data-img> tags
+    hydrateImages(document);
+
     revealInjected(); animateCounters(); activateProcess();
 
     if (siteTestimonials.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
